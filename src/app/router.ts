@@ -1,12 +1,11 @@
-import type { Component } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import type { Component } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'app',
       component: (): Component => import('pages/(app)/layout.vue'),
       children: [
         {
@@ -17,6 +16,6 @@ const router = createRouter({
       ],
     },
   ],
-})
+});
 
-export default router
+export default router;

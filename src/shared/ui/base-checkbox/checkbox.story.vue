@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-import BaseCheckbox from './index.vue'
+import BaseCheckbox from './index.vue';
 
-const checked = ref(false)
+const checked = ref(false);
 </script>
 
 <template>

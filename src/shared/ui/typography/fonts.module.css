@@ -1,0 +1,50 @@
+:global(:root) {
+  --font-h1: 700 normal 44px/60px "Roboto",
+  sans-serif;
+  --font-h2: 700 normal 40px/48px "Roboto",
+  sans-serif;
+  --font-h3: 600 normal 28px/40px "Roboto",
+  sans-serif;
+  --font-h4: 600 normal 24px/36px "Roboto",
+  sans-serif;
+  --font-h5: 600 normal 22px/32px "Roboto",
+  sans-serif;
+  --font-h6: 600 normal 20px/28px "Roboto",
+  sans-serif;
+  --font-body: 400 normal 16px/24px "Roboto",
+  sans-serif;
+  --font-small: 400 normal 14px/20px "Roboto",
+  sans-serif;
+}
+
+.h1 {
+  font: var(--font-h1);
+}
+
+.h2 {
+  font: var(--font-h2);
+}
+
+.h3 {
+  font: var(--font-h3)
+}
+
+.h4 {
+  font: var(--font-h4)
+}
+
+.h5 {
+  font: var(--font-h5);
+}
+
+.h6 {
+  font: var(--font-h6)
+}
+
+.text-body {
+  font: var(--font-body);
+}
+
+.text-small {
+  font: var(--font-small);
+}

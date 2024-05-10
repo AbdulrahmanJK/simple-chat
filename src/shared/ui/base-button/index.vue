@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed } from 'vue';
 
-import { Spinner } from 'shared/ui/spinner'
+import { Spinner } from 'shared/ui/spinner';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 const props = withDefaults(
   defineProps<{
@@ -21,42 +21,42 @@ const props = withDefaults(
     loading: false,
     full: false,
   },
-)
+);
 const emit = defineEmits<{
   (event: 'click'): void
-}>()
+}>();
 
 const spinnerColor = computed((): 'primary' | 'white' | 'black' => {
   switch (props.type) {
     case 'primary':
-      return 'white'
+      return 'white';
     case 'secondary':
-      return 'primary'
+      return 'primary';
     case 'neutral':
-      return 'black'
+      return 'black';
     default:
-      return 'primary'
+      return 'primary';
   }
-})
+});
 
 const spinnerSize = computed((): 'xs' | 'sm' | 'md' | 'lg' => {
   switch (props.size) {
     case 'xs':
-      return 'md'
+      return 'md';
     case 'sm':
-      return 'xs'
+      return 'xs';
     case 'md':
-      return 'xs'
+      return 'xs';
     case 'lg':
-      return 'sm'
+      return 'sm';
     case 'xl':
-      return 'md'
+      return 'md';
   }
-  return 'md'
-})
+  return 'md';
+});
 
 function onBtnClick(): void {
-  emit('click')
+  emit('click');
 }
 </script>
 

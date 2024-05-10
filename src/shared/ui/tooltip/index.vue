@@ -6,15 +6,15 @@ import {
   TooltipRoot,
   TooltipTrigger,
   useForwardPropsEmits,
-} from 'radix-vue'
-import type { TooltipRootEmits, TooltipRootProps } from 'radix-vue'
+} from 'radix-vue';
+import type { TooltipRootEmits, TooltipRootProps } from 'radix-vue';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
-const props = withDefaults(defineProps<TooltipRootProps>(), { delayDuration: 100 })
-const emits = defineEmits<TooltipRootEmits>()
+const props = withDefaults(defineProps<TooltipRootProps>(), { delayDuration: 100 });
+const emits = defineEmits<TooltipRootEmits>();
 
-const forward = useForwardPropsEmits(props, emits)
+const forward = useForwardPropsEmits(props, emits);
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { TabsList, type TabsListProps } from 'radix-vue'
+import { TabsList, type TabsListProps } from 'radix-vue';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
-defineProps<TabsListProps & { label?: string }>()
+defineProps<TabsListProps & { label?: string }>();
 </script>
 
 <template>

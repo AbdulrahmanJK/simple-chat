@@ -2,12 +2,12 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export interface ToastProps {
-  title: string;
-  content?: string;
+  title: string
+  content?: string
 }
 
 export interface ToastData extends ToastProps {
-  id: string;
+  id: string
 }
 
 export const useToastStore = defineStore('toast', () => {
@@ -22,18 +22,18 @@ export const useToastStore = defineStore('toast', () => {
   };
 
   const addToQueue = (toast: ToastProps): void => {
-    if (toast.title === activeToast.value?.title) return;
+    if (toast.title === activeToast.value?.title)
+      return;
     queue.value.push(toast);
     setActive(toast);
   };
 
   const removeFirstFromQueue = (): void => {
     queue.value.shift();
-    if (queue.value.length) {
+    if (queue.value.length)
       setActive(queue.value[0]);
-    } else {
+    else
       activeToast.value = null;
-    }
   };
   const clearQueue = (): void => {
     queue.value = [];
@@ -41,6 +41,6 @@ export const useToastStore = defineStore('toast', () => {
   return { queue, activeToast, addToQueue, removeFirstFromQueue, clearQueue };
 });
 
-export const openToast = (toast: ToastProps): void => {
+export function openToast(toast: ToastProps): void {
   useToastStore().addToQueue(toast);
-};
+}

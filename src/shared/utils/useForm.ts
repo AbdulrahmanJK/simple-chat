@@ -1,17 +1,13 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { ref, watch, toValue, reactive } from 'vue';
-import type { ObjectSchema, AnyObject } from 'yup';
+import { reactive, ref, toValue, watch } from 'vue';
+import type { AnyObject, ObjectSchema } from 'yup';
 import { ValidationError } from 'yup';
 
 export interface UseFormOptions<DATA extends AnyObject> {
-  mode: 'eager' | 'lazy';
-  defaultValues: DATA;
+  mode: 'eager' | 'lazy'
+  defaultValues: DATA
 }
 
-export const useForm = <DATA extends AnyObject>(
-  schema: ObjectSchema<DATA>,
-  options?: Partial<UseFormOptions<DATA>>,
-) => {
+export function useForm<DATA extends AnyObject>(schema: ObjectSchema<DATA>, options?: Partial<UseFormOptions<DATA>>) {
   type Errors = Partial<Record<keyof DATA, ValidationError>>;
   // Merge default options with user-defined options
   const opts: UseFormOptions<DATA> = Object.assign(
@@ -35,8 +31,10 @@ export const useForm = <DATA extends AnyObject>(
 
   // Function to clear error by data key
   const clearError = (key: keyof DATA): void => {
-    if (!errors.value) return;
-    if (!(key in errors.value)) return;
+    if (!errors.value)
+      return;
+    if (!(key in errors.value))
+      return;
 
     delete errors.value[key];
   };
@@ -52,14 +50,14 @@ export const useForm = <DATA extends AnyObject>(
   // Function to initiate validation watch
   let unwatch: null | (() => void) = null;
   const validationWatch = (): void => {
-    if (unwatch !== null) {
+    if (unwatch !== null)
       return;
-    }
 
     unwatch = watch(
       () => toValue(values),
       async () => {
-        await validate();
+        // eslint-disable-next-line ts/no-use-before-define
+        validate();
       },
       { deep: true },
     );
@@ -73,7 +71,8 @@ export const useForm = <DATA extends AnyObject>(
       schema.validateSync(values, { abortEarly: false });
       isValid.value = true;
       return true;
-    } catch (err) {
+    }
+    catch (err) {
       if (err instanceof ValidationError) {
         setErrors(err);
 
@@ -89,18 +88,17 @@ export const useForm = <DATA extends AnyObject>(
   const submit = (callback: () => Promise<void> | void, onError?: VoidFunction) => async () => {
     isLoading.value = true;
     const isSuccess = validate();
-    if (isSuccess) {
+    if (isSuccess)
       await callback();
-    } else {
+    else
       onError?.();
-    }
+
     isLoading.value = false;
   };
 
   // Activate validation watch based on the chosen mode
-  if (opts.mode === 'eager') {
+  if (opts.mode === 'eager')
     validationWatch();
-  }
 
   // Expose functions and variables for external use
   return {
@@ -114,4 +112,4 @@ export const useForm = <DATA extends AnyObject>(
     clearError,
     setToDefaultValues,
   };
-};
+}

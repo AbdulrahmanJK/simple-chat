@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 withDefaults(
   defineProps<{
@@ -10,7 +10,7 @@ withDefaults(
     color: 'primary',
     size: 'lg',
   },
-)
+);
 </script>
 
 <template>

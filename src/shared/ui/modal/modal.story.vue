@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-import ErrorIcon from 'shared/icons/error.svg'
-import { BaseButton } from 'shared/ui/base-button'
+import ErrorIcon from 'shared/icons/error.svg';
+import { BaseButton } from 'shared/ui/base-button';
 
-import Modal from './index.vue'
+import Modal from './index.vue';
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 </script>
 
 <template>

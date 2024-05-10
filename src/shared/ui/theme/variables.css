@@ -1,0 +1,33 @@
+/*
+All this variables are exported from Figma
+with the help of **variables2css** plugin.
+*/
+:root {
+    /* colors */
+    --palette-black: #353c4a;
+    --palette-red: #e15d56;
+    --palette-white: #fff;
+    --palette-blue: #3C67D6;
+    --palette-blue-normal: #5d8efd;
+    --palette-blue-light: #EBF0FB;
+  
+    /* spacings */
+    --margin-xs: 2px;
+    --margin-s: 4px;
+    --margin-m: 8px;
+    --margin-l: 12px;
+    --margin-xl: 16px;
+    --margin-xxl: 20px;
+    --margin-xxxl: 24px;
+    --margin-xxxxl: 32px;
+    --margin-xxxxxxxl: 56px;
+    --margin-main-margin: 104px;
+  
+    /* radiuses */
+    --radius-xs: 2px;
+    --radius-s: 4px;
+    --radius-m: 8px;
+    --radius-l: 16px;
+    --radius-full: 50%;
+}
+  

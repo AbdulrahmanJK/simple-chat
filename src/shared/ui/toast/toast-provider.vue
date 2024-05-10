@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { ToastProvider, ToastViewport } from 'radix-vue';
+
+import { useToastStore } from './model';
+import styles from './styles.module.css';
+import Toast from './toast.vue';
+
+const toasts = useToastStore();
+</script>
+
 <template>
   <ToastProvider label="Notification" :duration="3000" swipe-direction="right">
     <slot />
@@ -14,13 +24,3 @@
     <ToastViewport :class="styles.viewport" />
   </ToastProvider>
 </template>
-
-<script setup lang="ts">
-import { ToastProvider, ToastViewport } from 'radix-vue';
-
-import { useToastStore } from './model';
-import styles from './styles.module.css';
-import Toast from './toast.vue';
-
-const toasts = useToastStore();
-</script>

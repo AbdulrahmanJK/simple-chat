@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { TabsContent, type TabsContentProps } from 'radix-vue'
+import { TabsContent, type TabsContentProps } from 'radix-vue';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
-defineProps<TabsContentProps>()
+defineProps<TabsContentProps>();
 </script>
 
 <template>

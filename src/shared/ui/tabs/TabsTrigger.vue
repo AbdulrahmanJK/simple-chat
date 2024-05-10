@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { TabsTrigger, type TabsTriggerProps } from 'radix-vue'
+import { TabsTrigger, type TabsTriggerProps } from 'radix-vue';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
-defineProps<TabsTriggerProps>()
+defineProps<TabsTriggerProps>();
 </script>
 
 <template>

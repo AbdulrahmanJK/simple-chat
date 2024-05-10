@@ -1,11 +1,11 @@
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import autoprefixer from 'autoprefixer'
-import nested from 'postcss-nested'
-import customMedia from 'postcss-custom-media'
-import postcssGlobalData from '@csstools/postcss-global-data'
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import autoprefixer from 'autoprefixer';
+import nested from 'postcss-nested';
+import customMedia from 'postcss-custom-media';
+import postcssGlobalData from '@csstools/postcss-global-data';
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('postcss-load-config').Config} */
 const config = {
@@ -17,6 +17,6 @@ const config = {
     customMedia,
     nested,
   ],
-}
+};
 
-export default config
+export default config;

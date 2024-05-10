@@ -7,23 +7,23 @@ import {
   DialogPortal,
   DialogRoot,
   DialogTitle,
-} from 'radix-vue'
-import type { DialogRootEmits } from 'radix-vue'
+} from 'radix-vue';
+import type { DialogRootEmits } from 'radix-vue';
 
-import CloseIcon from 'shared/icons/close.svg'
+import CloseIcon from 'shared/icons/close.svg';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
-const emit = defineEmits<DialogRootEmits>()
+const emit = defineEmits<DialogRootEmits>();
 defineSlots<{
   default(props: { close: VoidFunction }): never
   icon(props: object): never
   title(props: object): never
   description(props: object): never
   actions(props: { close: VoidFunction }): never
-}>()
+}>();
 function closeModal(): void {
-  emit('update:open', false)
+  emit('update:open', false);
 }
 </script>
 
