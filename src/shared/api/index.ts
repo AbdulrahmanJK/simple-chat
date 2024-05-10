@@ -1,1 +1,1 @@
-export { client } from './client'
+export { apiClient } from './client'

@@ -2,13 +2,12 @@
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "composite": true,
+    "module": "ESNext",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "app/*": ["./src/app/*"],
-      "widgets/*": ["./src/widgets/*"],
-      "features/*": ["./src/features/*"],
-      "entities/*": ["./src/entities/*"],
+      "modules/*": ["./src/modules/*"],
       "shared/*": ["./src/shared/*"],
       "pages/*": ["./src/pages/*"]
     },

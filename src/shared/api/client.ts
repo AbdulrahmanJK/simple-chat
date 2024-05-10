@@ -1,17 +1,15 @@
-import createClient from 'openapi-fetch'
-import type { paths } from './schema'
+import { createClient } from '@supabase/supabase-js'
+import type { Database } from './schema'
 
-const API_HOST = import.meta.env.VITE_API_HOST
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-const authToken: string | undefined = undefined
-
-export const client: ReturnType<typeof createClient<paths>> = createClient<paths>(
+export const apiClient = createClient<Database>(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY,
   {
-    baseUrl: API_HOST,
-    headers: {
-      get Authorization() {
-        return authToken ? `Bearer ${authToken}` : undefined
-      },
-    },
-  },
+    auth: {
+      storageKey: 'simple-chat-token'
+    }
+  }
 )
