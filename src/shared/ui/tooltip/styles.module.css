@@ -1,0 +1,43 @@
+.arrow {
+    fill: var(--main-white);
+  }
+  
+  .content {
+    padding: 20px;
+    background-color: var(--main-white);
+    border-radius: 12px;
+    box-shadow: 0 -2px 8px 0 rgb(0 0 0 / 8%), 0 4px 8px 0 rgb(0 0 0 / 8%);
+  }
+  
+  @keyframes show {
+    from {
+      transform: translate(-10px, 0);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes hide {
+    from {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  
+    to {
+      transform: translate(-10px, 0);
+      opacity: 0;
+    }
+  }
+  
+  .content[data-state="delayed-open"] {
+    animation: show 200ms ease-out;
+  }
+  
+  .content[data-state="delayed-closed"] {
+    animation: hide 200ms ease-in;
+  }
+  

@@ -1,0 +1,45 @@
+.viewport {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toast {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  background: var(--main-notification-error-red);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: var(--main-white);
+  font: var(--font-p1);
+}
+
+.close {
+  display: flex;
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  color: #FACED1;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 12px;
+  height: 24px;
+  width: 24px;
+}

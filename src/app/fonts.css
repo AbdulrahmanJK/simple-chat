@@ -1,0 +1,58 @@
+:root {
+    /* Headings */
+    --font-h1: 700 normal 28px/32px "Roboto", sans-serif;
+    --font-h2: 500 normal 24px/32px "Roboto", sans-serif;
+    --font-h3: 500 normal 18px/26px "Roboto", sans-serif;
+    --font-h4: 500 normal 18px/26px "Roboto", sans-serif;
+    --font-h5: 500 normal 16px/20px "Roboto", sans-serif;
+    --font-h6: 500 normal 16px/20px "Roboto", sans-serif;
+
+    /* Paragraphs */
+    --font-p1: 500 normal 14px/20px "Roboto", sans-serif;
+    --font-p2: 400 normal 14px/20px "Roboto", sans-serif;
+
+    /* Texts */
+    --font-span1: 300 normal 16px/24px "Roboto", sans-serif;
+    --font-span2: 400 normal 14px/16px "Roboto", sans-serif;
+    --font-span3: 400 normal 12px/16px "Roboto", sans-serif;
+}
+
+.h1, h1 {
+    font: var(--font-h1);
+}
+
+.h2, h2 {
+    font: var(--font-h2);
+}
+
+.h3, h3 {
+    font: var(--font-h3);
+}
+
+.h4, h4 {
+    font: var(--font-h4);
+}
+
+.h5, h5 {
+    font: var(--font-h5);
+}
+
+.p1 {
+    font: var(--font-p1);
+}
+
+.p2 {
+    font: var(--font-p2);
+}
+
+.span1 {
+    font: var(--font-span1);
+}
+
+.span2 {
+    font: var(--font-span2);
+}
+
+.span3 {
+    font: var(--font-span3);
+}

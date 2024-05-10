@@ -1,0 +1,28 @@
+.list {
+    width: max-content;
+    display: flex;
+    gap: 4px;
+    border-radius: 16px;
+}
+
+.tab {
+
+    &[data-state='inactive'] {
+        &:hover {
+            background-color: #FFF;
+        }
+
+        &:focus {
+            background-color: #FFF;
+        }
+    }
+
+    &[data-state='active'] {
+
+    }
+}
+
+.content[data-state="active"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
