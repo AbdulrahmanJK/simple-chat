@@ -1,8 +1,7 @@
 import { defineSetupVue3 } from '@histoire/plugin-vue';
 
 import 'modern-normalize/modern-normalize.css';
-import 'unfonts.css';
-import 'app/main.css';
+import './main.css';
 
 import { Theme } from 'shared/ui';
 
